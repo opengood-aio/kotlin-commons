@@ -3,7 +3,7 @@ package io.opengood.commons.extension.method
 import io.kotest.core.spec.style.FunSpec
 import io.kotest.matchers.shouldBe
 import io.kotest.matchers.string.shouldBeEmpty
-import io.opengood.commons.function.captureOutput
+import io.opengood.commons.function.captureStdOut
 
 class PairTest : FunSpec ({
 
@@ -14,7 +14,7 @@ class PairTest : FunSpec ({
             |
         """.trimMargin()
 
-        val output = captureOutput {
+        val output = captureStdOut {
             arrayOf("foo", "bar").printAll()
         }
 
@@ -22,7 +22,7 @@ class PairTest : FunSpec ({
     }
 
     test("array of generic type printAll extension method does not print all items to standard output when none exist") {
-        val output = captureOutput {
+        val output = captureStdOut {
             emptyArray<String>().printAll()
         }
 

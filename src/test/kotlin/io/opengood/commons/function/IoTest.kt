@@ -5,8 +5,8 @@ import io.kotest.matchers.shouldBe
 
 class IoTest : FunSpec({
 
-    test("captureOutput function collects standard output and returns it") {
-        val output = captureOutput {
+    test("captureStdOut function collects standard output and returns it") {
+        val output = captureStdOut {
             print("foo")
         }
 
