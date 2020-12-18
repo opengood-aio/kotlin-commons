@@ -1,4 +1,4 @@
-package io.opengood.commons.extension.property
+package io.opengood.commons.kotlin.extension.property
 
 import io.kotest.core.spec.style.FunSpec
 import io.kotest.matchers.shouldBe

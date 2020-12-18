@@ -1,4 +1,4 @@
-package io.opengood.commons.extension.method
+package io.opengood.commons.kotlin.extension.method
 
 import io.kotest.core.spec.style.FunSpec
 import io.kotest.matchers.booleans.shouldBeFalse

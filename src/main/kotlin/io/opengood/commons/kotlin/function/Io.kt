@@ -1,4 +1,4 @@
-package io.opengood.commons.function
+package io.opengood.commons.kotlin.function
 
 import java.io.ByteArrayOutputStream
 import java.io.PrintStream

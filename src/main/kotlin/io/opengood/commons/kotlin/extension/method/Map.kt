@@ -1,6 +1,6 @@
-package io.opengood.commons.extension.method
+package io.opengood.commons.kotlin.extension.method
 
-import io.opengood.commons.infix.then
+import io.opengood.commons.kotlin.infix.then
 
 fun <T : Any, V : Any> Map<T, List<V>>.containsMultipleListItems(key: T): Boolean =
     containsKey(key) then { this[key]!!.size > 1 } ?: false

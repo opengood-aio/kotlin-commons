@@ -1,9 +1,9 @@
-package io.opengood.commons.extension.method
+package io.opengood.commons.kotlin.extension.method
 
 import io.kotest.core.spec.style.FunSpec
 import io.kotest.matchers.shouldBe
 import io.kotest.matchers.string.shouldBeEmpty
-import io.opengood.commons.function.captureStdOut
+import io.opengood.commons.kotlin.function.captureStdOut
 
 class PairTest : FunSpec ({
 

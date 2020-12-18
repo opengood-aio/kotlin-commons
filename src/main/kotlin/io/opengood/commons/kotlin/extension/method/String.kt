@@ -1,6 +1,6 @@
-package io.opengood.commons.extension.method
+package io.opengood.commons.kotlin.extension.method
 
-import io.opengood.commons.infix.then
+import io.opengood.commons.kotlin.infix.then
 
 fun String.equalsIgnoreCase(value: String): Boolean =
     isNotBlank() then { equals(value, ignoreCase = true) } ?: false

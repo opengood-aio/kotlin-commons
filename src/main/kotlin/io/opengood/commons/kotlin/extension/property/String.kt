@@ -1,4 +1,4 @@
-package io.opengood.commons.extension.property
+package io.opengood.commons.kotlin.extension.property
 
 val String.Companion.carriageReturn: String
     get() = "\r"
