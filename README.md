@@ -3,6 +3,9 @@
 Commons library containing reusable functions, extensions, and objects
 for Kotlin
 
+![Run Tests](https://github.com/opengoodio/kotlin-commons/workflows/Run%20Tests/badge.svg)
+![Publish Release](https://github.com/opengoodio/kotlin-commons/workflows/Publish%20Release/badge.svg)
+
 ## Setup
 
 ### Add Dependency

@@ -1,33 +1,47 @@
-name: Creates GitHub release and publishes package to Maven Central repository from Gradle project
+name: Publish Release
+# description:
+# - Creates release version in gradle.properties
+# - Runs Gradle build creating release jar package
+# - Runs Gradle uploadArchives publishing package to Maven Central staging repository
+# - Creates release version Git commit
+# - Creates Git release version tag
+# - Pushes Git release version commit and tag
+# - Creates GitHub release for release version tag
+# - Creates new development version in gradle.properties, incrementing minor version part
+# - Creates new development version Git commit
+# - Pushes Git new development version commit
 on:
   push:
     branches:
       - main
 
 jobs:
-  gradle:
-    strategy:
-      matrix:
-        os: [ ubuntu-latest, macos-latest, windows-latest ]
-    runs-on: ${{ matrix.os }}
-    if: "contains(github.event.head_commit.message, 'Create release')"
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: Setup Java
-        uses: actions/setup-java@v1
-        with:
-          java-version: 11
-      - name:
-        uses: eskatos/gradle-command-action@v1
-        with:
-          arguments: build
-
-  build:
-    name:
+  main:
     runs-on: ubuntu-latest
     if: "contains(github.event.head_commit.message, 'Create release')"
     steps:
       - name: Checkout
         uses: actions/checkout@v2
 
+      - name: Setup Git
+        run: |
+          git config user.name ${GIT_USER}
+          git config user.email ${GIT_EMAIL}
+        env:
+          GIT_USER: ci-bot
+          GIT_EMAIL: ci-bot@opengood.io
+
+      - name: Setup Java
+        uses: actions/setup-java@v1
+        with:
+          java-version: 11
+
+      - name: Run Release and Publish
+        uses: eskatos/gradle-command-action@v1
+        with:
+          arguments: clean release -Prelease.useAutomaticVersion=true
+        env:
+          GPG_SIGNING_PRIVATE_KEY: ${{ secrets.GPG_SIGNING_PRIVATE_KEY }}
+          GPG_SIGNING_PASSWORD: ${{ secrets.GPG_SIGNING_PASSWORD }}
+          OSSRH_USERNAME: ${{ secrets.OSSRH_USERNAME }}
+          OSSRH_PASSWORD: ${{ secrets.OSSRH_PASSWORD }}
