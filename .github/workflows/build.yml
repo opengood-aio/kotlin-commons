@@ -1,6 +1,6 @@
-name: Run Tests
+name: Build
 # description:
-# - Runs Gradle test executing all test cases
+# - Runs Gradle build compiling source code and executing tests
 on:
   push:
     branches:
@@ -12,7 +12,7 @@ on:
       - 'README.md'
 
 jobs:
-  main:
+  build:
     runs-on: ubuntu-latest
     if: "!contains(github.event.head_commit.message, 'Create release')"
     steps:
@@ -24,7 +24,18 @@ jobs:
         with:
           java-version: 11
 
-      - name: Run Tests
+      - name: Build
         uses: eskatos/gradle-command-action@v1
         with:
-          arguments: clean test
+          arguments: clean build
+
+      - name: Coverage
+        uses: codecov/codecov-action@v1
+        with:
+          file: ./build/reports/jacoco/test/jacocoTestReport.xml
+          verbose: true
+
+      - name: FOSSA
+        uses: fossa-contrib/fossa-action@v1
+        with:
+          fossa-api-key: ${{ secrets.FOSSA_API_KEY }}
