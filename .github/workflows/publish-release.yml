@@ -28,8 +28,8 @@ jobs:
           git config user.name ${GIT_USER}
           git config user.email ${GIT_EMAIL}
         env:
-          GIT_USER: ci-bot
-          GIT_EMAIL: ci-bot@opengood.io
+          GIT_USER: ${{ secrets.CI_USER_GIT_USER }}
+          GIT_EMAIL: ${{ secrets.CI_USER_GIT_EMAIL }}
 
       - name: Setup Java
         uses: actions/setup-java@v1
