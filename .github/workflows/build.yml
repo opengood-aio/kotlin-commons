@@ -47,9 +47,7 @@ jobs:
           arguments: clean build -x signArchives --no-daemon
 
       - name: Codestyle
-        uses: eskatos/gradle-command-action@v1
-        with:
-          arguments: ktlintCheck --no-daemon
+        uses: fabiocapasso93/gha-kotlin-linter@v1.0
 
       - name: Coverage
         uses: codecov/codecov-action@v1
