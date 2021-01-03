@@ -10,3 +10,6 @@ fun String.isBoolean(): Boolean =
 
 fun String.isInt(): Boolean =
     isNotBlank() then { all { Character.isDigit(it) } } ?: false
+
+fun String.toIntOrZero(): Int =
+    toIntOrNull() ?: 0
