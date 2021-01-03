@@ -3,6 +3,7 @@ package io.opengood.commons.kotlin.extension.method
 import io.kotest.core.spec.style.FunSpec
 import io.kotest.matchers.booleans.shouldBeFalse
 import io.kotest.matchers.booleans.shouldBeTrue
+import io.kotest.matchers.shouldBe
 
 class StringTest : FunSpec({
 
@@ -52,5 +53,25 @@ class StringTest : FunSpec({
 
     test("string isInt extension method returns false when string contains special characters") {
         "12345?<>$%*&@!".isInt().shouldBeFalse()
+    }
+
+    test("string toIntOrZero extension method returns integer converted from string") {
+        "12345".toIntOrZero() shouldBe 12345
+    }
+
+    test("string toIntOrZero extension method returns integer converted from string without leading zeroes") {
+        "00012345".toIntOrZero() shouldBe 12345
+    }
+
+    test("string toIntOrZero extension method returns zero when string contains decimal characters") {
+        "12345.00".toIntOrZero() shouldBe 0
+    }
+
+    test("string toIntOrZero extension method returns zero when string contains alphanumeric characters") {
+        "12345hello".toIntOrZero() shouldBe 0
+    }
+
+    test("string toIntOrZero extension method returns zero when string contains special characters") {
+        "12345?<>$%*&@!".toIntOrZero() shouldBe 0
     }
 })
