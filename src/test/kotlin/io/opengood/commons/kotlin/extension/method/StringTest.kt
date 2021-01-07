@@ -7,6 +7,18 @@ import io.kotest.matchers.shouldBe
 
 class StringTest : FunSpec({
 
+    test("string containsIgnoreCase extension method returns true when case insensitive substring contained in string") {
+        "Hello World!".containsIgnoreCase("HELLO").shouldBeTrue()
+    }
+
+    test("string containsIgnoreCase extension method returns true when case sensitive substring contained in string") {
+        "Hello World!".containsIgnoreCase("Hello").shouldBeTrue()
+    }
+
+    test("string containsIgnoreCase extension method returns false when substring not contained in string") {
+        "Hello World!".containsIgnoreCase("foo").shouldBeFalse()
+    }
+
     test("string equalsIgnoreCase extension method returns true when case insensitive strings are equal") {
         "Hello World!".equalsIgnoreCase("HELLO WORLD!").shouldBeTrue()
     }

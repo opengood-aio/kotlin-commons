@@ -2,6 +2,9 @@ package io.opengood.commons.kotlin.extension.method
 
 import io.opengood.commons.kotlin.infix.then
 
+fun String.containsIgnoreCase(element: String): Boolean =
+    isNotBlank() then { contains(element, ignoreCase = true) } ?: false
+
 fun String.equalsIgnoreCase(value: String): Boolean =
     isNotBlank() then { equals(value, ignoreCase = true) } ?: false
 
