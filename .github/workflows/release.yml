@@ -38,9 +38,10 @@ jobs:
           java-version: 11
 
       - name: Run Release and Publish
-        uses: eskatos/gradle-command-action@v1
+        uses: burrunan/gradle-cache-action@v1
         with:
           arguments: clean release -Prelease.useAutomaticVersion=true --no-daemon
+          gradle-version: wrapper
         env:
           GPG_SIGNING_PASSWORD: ${{ secrets.GPG_SIGNING_PASSWORD }}
           GPG_SIGNING_PRIVATE_KEY: ${{ secrets.GPG_SIGNING_PRIVATE_KEY }}

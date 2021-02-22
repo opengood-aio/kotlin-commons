@@ -7,6 +7,10 @@ import io.kotest.matchers.shouldBe
 
 class StringTest : FunSpec({
 
+    test("string capitalizeWords extension method returns all words in string capitalized") {
+        "hello world!".capitalizeWords() shouldBe "Hello World!"
+    }
+
     test("string containsIgnoreCase extension method returns true when case insensitive substring contained in string") {
         "Hello World!".containsIgnoreCase("HELLO").shouldBeTrue()
     }

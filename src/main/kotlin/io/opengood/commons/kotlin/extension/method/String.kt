@@ -1,6 +1,10 @@
 package io.opengood.commons.kotlin.extension.method
 
+import io.opengood.commons.kotlin.extension.property.whitespace
 import io.opengood.commons.kotlin.infix.then
+
+fun String.capitalizeWords() =
+    split(String.whitespace).joinToString(String.whitespace) { it.capitalize() }
 
 fun String.containsIgnoreCase(element: String): Boolean =
     isNotBlank() then { contains(element, ignoreCase = true) } ?: false
