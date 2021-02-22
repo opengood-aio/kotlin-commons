@@ -33,6 +33,7 @@ jobs:
         with:
           arguments: clean build --no-daemon
           gradle-version: wrapper
+          save-gradle-dependencies-cache: true
 
       - name: Codestyle
         uses: fabiocapasso93/gha-kotlin-linter@v1.0
