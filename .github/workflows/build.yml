@@ -28,7 +28,7 @@ jobs:
       - name: Build
         uses: burrunan/gradle-cache-action@v1
         with:
-          arguments: clean build -x signArchives --no-daemon
+          arguments: clean build --no-daemon
           gradle-version: wrapper
 
       - name: Codestyle
