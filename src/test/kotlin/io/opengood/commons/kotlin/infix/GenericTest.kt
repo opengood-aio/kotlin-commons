@@ -1,8 +1,6 @@
 package io.opengood.commons.kotlin.infix
 
 import io.kotest.core.spec.style.FunSpec
-import io.kotest.matchers.booleans.shouldBeFalse
-import io.kotest.matchers.booleans.shouldBeTrue
 import io.kotest.matchers.shouldBe
 
 class GenericTest : FunSpec({
