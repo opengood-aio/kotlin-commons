@@ -10,12 +10,12 @@ class StringTest : FunSpec({
         String.carriageReturn shouldBe "\r"
     }
 
-    test("string carriageReturnLineFeed extension property returns carriage return and line feed string") {
-        String.carriageReturnLineFeed shouldBe "\n\r"
-    }
-
     test("string comma extension property returns carriage comma string") {
         String.comma shouldBe ","
+    }
+
+    test("string crlf extension property returns carriage return and line feed string") {
+        String.crlf shouldBe "\n\r"
     }
 
     test("string empty extension property returns empty string") {
@@ -26,8 +26,16 @@ class StringTest : FunSpec({
         String.equalsSign shouldBe "="
     }
 
-    test("string newLine extension property returns newline string") {
-        String.newLine shouldBe "\n"
+    test("string greaterThanSign extension property returns greater than sign string") {
+        String.greaterThanSign shouldBe ">"
+    }
+
+    test("string lessThanSign extension property returns less than sign string") {
+        String.lessThanSign shouldBe "<"
+    }
+
+    test("string newline extension property returns newline string") {
+        String.newline shouldBe "\n"
     }
 
     test("string pipe extension property returns pipe string") {
