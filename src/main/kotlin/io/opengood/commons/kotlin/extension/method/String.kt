@@ -3,11 +3,11 @@ package io.opengood.commons.kotlin.extension.method
 import io.opengood.commons.kotlin.extension.property.whitespace
 import io.opengood.commons.kotlin.infix.then
 
-fun String.capitalizeWords() =
+fun String.capitalizeWords(): String =
     split(String.whitespace).joinToString(String.whitespace) { it.capitalize() }
 
-fun String.containsIgnoreCase(element: String): Boolean =
-    isNotBlank() then { contains(element, ignoreCase = true) } ?: false
+fun String.containsIgnoreCase(substr: String): Boolean =
+    isNotBlank() then { contains(substr, ignoreCase = true) } ?: false
 
 fun String.equalsIgnoreCase(value: String): Boolean =
     isNotBlank() then { equals(value, ignoreCase = true) } ?: false

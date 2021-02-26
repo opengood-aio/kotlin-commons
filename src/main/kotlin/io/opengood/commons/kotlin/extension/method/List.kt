@@ -1,4 +1,4 @@
 package io.opengood.commons.kotlin.extension.method
 
-fun List<String>.containsIgnoreCase(element: String) =
-    this.any { it.contains(element, ignoreCase = true) }
+fun List<String>.containsIgnoreCase(item: String): Boolean =
+    any { it.contains(item, ignoreCase = true) }
