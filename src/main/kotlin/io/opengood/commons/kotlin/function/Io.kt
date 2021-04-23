@@ -9,7 +9,7 @@ fun captureStdOut(func: () -> Unit): String {
     val printStream = PrintStream(outputStream)
 
     System.setOut(printStream)
-    func.invoke()
+    func()
     System.out.flush()
     System.setOut(stdOut)
 

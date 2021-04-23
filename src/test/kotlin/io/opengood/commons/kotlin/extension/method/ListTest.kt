@@ -1,6 +1,7 @@
 package io.opengood.commons.kotlin.extension.method
 
 import io.kotest.core.spec.style.FunSpec
+import io.kotest.matchers.booleans.shouldBeFalse
 import io.kotest.matchers.booleans.shouldBeTrue
 
 class ListTest : FunSpec({
@@ -18,8 +19,8 @@ class ListTest : FunSpec({
     }
 
     test("list containsIgnoreCase extension method returns false when string not contained in list") {
-        val list = listOf("foo", "bar")
+        val list = listOf("bar")
 
-        list.containsIgnoreCase("Foo").shouldBeTrue()
+        list.containsIgnoreCase("foo").shouldBeFalse()
     }
 })
