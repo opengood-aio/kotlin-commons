@@ -10,3 +10,6 @@ fun <K : Any, V : Any> Map<K, V>.notContainsKey(key: K): Boolean =
 
 fun <K : Any, V : Any> Map<K, V>.notContainsValue(value: V): Boolean =
     !containsValue(value)
+
+fun <K : Any, V : Any> MutableMap<K, V>.putIfNotAbsent(entry: Map.Entry<K, V>?) =
+    entry?.let { putIfAbsent(it.key, it.value) }

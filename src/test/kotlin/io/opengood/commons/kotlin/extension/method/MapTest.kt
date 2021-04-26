@@ -3,6 +3,9 @@ package io.opengood.commons.kotlin.extension.method
 import io.kotest.core.spec.style.FunSpec
 import io.kotest.matchers.booleans.shouldBeFalse
 import io.kotest.matchers.booleans.shouldBeTrue
+import io.kotest.matchers.maps.shouldContain
+import io.kotest.matchers.maps.shouldNotContain
+import io.opengood.commons.kotlin.function.makeEntry
 
 class MapTest : FunSpec({
 
@@ -52,5 +55,24 @@ class MapTest : FunSpec({
         val map = mapOf("foo" to "bar")
 
         map.notContainsValue("bar").shouldBeFalse()
+    }
+
+    test("map putIfNotAbsent extension method adds map entry to map when it does not exist") {
+        val map = mutableMapOf<String, String>()
+        val entry = makeEntry("foo", "bar")
+
+        map.putIfNotAbsent(entry)
+
+        map.shouldContain("foo", "bar")
+    }
+
+    test("map putIfNotAbsent extension method does not add map entry to map when it already exists") {
+        val map = mutableMapOf(Pair("foo", "bar"))
+        val entry = makeEntry("foo", "baz")
+
+        map.putIfNotAbsent(entry)
+
+        map.shouldContain("foo", "bar")
+        map.shouldNotContain("foo", "baz")
     }
 })
