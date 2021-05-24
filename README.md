@@ -32,7 +32,7 @@ implementation("io.opengood.commons:kotlin-commons:VERSION")
 
 **Note:** See *Release* version badge above for latest version.
 
-# Features
+## Features
 
 ### Annotations
 
@@ -347,4 +347,3 @@ of specified value:
     
     10 isDivFactorOf 5
     ```
-
