@@ -248,7 +248,7 @@ and if not, then value is zero:
 | `greaterThanSign` | Greater than sign | `>` |
 | `lessThanSign` | Less than sign | `<` |
 | `newline` | Newline | `\n` |
-| `pipe` | Pipe | `|` |
+| `pipe` | Pipe | `\|` |
 | `tab` | Tab | `\t` |
 | `whitespace` | Whitespace |  |
 
