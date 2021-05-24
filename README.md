@@ -38,7 +38,7 @@ implementation("io.opengood.commons:kotlin-commons:VERSION")
 
 #### NoArg
 
-* Automatically generate a no argument constructor on a data class:
+* Automatically generate no argument constructor on data class:
 
     Example:
 
@@ -51,7 +51,7 @@ implementation("io.opengood.commons:kotlin-commons:VERSION")
     )
     ```
 
-    `build.gradle.kts`
+    Add configuration to `build.gradle.kts`:
 
     ```kotlin
     noArg {
@@ -232,5 +232,119 @@ and if not, then value is zero:
     import io.opengood.commons.kotlin.extension.method.toIntOrZero
     
     "12345".toIntOrZero()
+    ```
+
+#### Properties
+
+##### String
+
+| Property | Description | Value |
+|---|---|---|
+| `carriageReturn` | Carrier return | `\r` |
+| `comma` | Comma | `,` |
+| `crlf` | Carriage return/line feed | `\n\r` |
+| `empty` | Empty string |  |
+| `equalsSign` | Equals sign | `=` |
+| `greaterThanSign` | Greater than sign | `>` |
+| `lessThanSign` | Less than sign | `<` |
+| `newline` | Newline | `\n` |
+| `pipe` | Pipe | `|` |
+| `tab` | Tab | `\t` |
+| `whitespace` | Whitespace |  |
+
+Example:
+
+```kotlin
+import io.opengood.commons.kotlin.extension.property.*
+
+String.carriageReturn
+String.comma
+String.crlf
+String.empty
+String.equalsSign
+String.greaterThanSign
+String.lessThanSign
+String.newline
+String.pipe
+String.tab
+String.whitespace
+```
+
+### Functions
+
+#### I/O
+
+##### captureStdOut
+
+* Captures standard output of specified function:
+
+    Example:
+
+    ```kotlin
+    import io.opengood.commons.kotlin.function.captureStdOut
+    
+    val output = captureStdOut { print("foo") }
+    ```
+
+#### Map
+
+##### makeEntry
+
+* Creates a map entry using specified key and value:
+
+    Example:
+
+    ```kotlin
+    import io.opengood.commons.kotlin.function.makeEntry
+    
+    makeEntry("foo", "bar")
+    ```
+
+### Infix Functions
+
+#### Boolean
+
+##### then
+
+* Shorthand ternary function for evaluating simple conditions then
+returning simple results:
+
+    Example:
+
+    ```kotlin
+    import io.opengood.commons.kotlin.infix.then
+    
+    val condition = 1
+    val result = (condition == 1) then { true } ?: false
+    ```
+
+#### Generic Type
+
+##### firstOrDefault
+
+* Gets value of specified object, if not null, otherwise, gets specified
+default value:
+
+    Example:
+
+    ```kotlin
+    import io.opengood.commons.kotlin.infix.firstOrDefault
+    
+    "foo" firstOrDefault "bar"
+    ```
+
+#### Integer
+
+##### isDivFactorOf
+
+* Gets value indicating if specified integer is divisible by a factor
+of specified value:
+
+    Example:
+
+    ```kotlin
+    import io.opengood.commons.kotlin.infix.isDivFactorOf
+    
+    10 isDivFactorOf 5
     ```
 
