@@ -1,10 +1,12 @@
 package io.opengood.commons.kotlin.extension.method
 
+import io.kotest.assertions.throwables.shouldThrow
 import io.kotest.core.spec.style.FunSpec
 import io.kotest.matchers.booleans.shouldBeFalse
 import io.kotest.matchers.booleans.shouldBeTrue
 import io.kotest.matchers.maps.shouldContain
 import io.kotest.matchers.maps.shouldNotContain
+import io.kotest.matchers.shouldBe
 import io.opengood.commons.kotlin.function.makeEntry
 
 class MapTest : FunSpec({
@@ -31,6 +33,20 @@ class MapTest : FunSpec({
         val map = emptyMap<String, List<String>>()
 
         map.containsMultipleListItems("foo").shouldBeFalse()
+    }
+
+    test("map keyByIndex extension method returns key at specified index") {
+        val map = mapOf("foo" to "bar")
+
+        map.keyByIndex(0) shouldBe "foo"
+    }
+
+    test("map keyByIndex extension method throws exception when key does not exist") {
+        val map = emptyMap<String, String>()
+
+        shouldThrow<IndexOutOfBoundsException> {
+            map.keyByIndex(0)
+        }
     }
 
     test("map notContainsKey extension method returns true when key does not exist") {
@@ -74,5 +90,19 @@ class MapTest : FunSpec({
 
         map.shouldContain("foo", "bar")
         map.shouldNotContain("foo", "baz")
+    }
+
+    test("map valueByIndex extension method returns value at specified index") {
+        val map = mapOf("foo" to "bar")
+
+        map.valueByIndex(0) shouldBe "bar"
+    }
+
+    test("map valueByIndex extension method throws exception when value does not exist") {
+        val map = emptyMap<String, String>()
+
+        shouldThrow<IndexOutOfBoundsException> {
+            map.valueByIndex(0)
+        }
     }
 })

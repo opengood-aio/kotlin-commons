@@ -92,6 +92,52 @@ implementation("io.opengood.commons:kotlin-commons:VERSION")
     listOf("foo", "bar").containsIgnoreCase("foo")
     ```
 
+###### sortAscending
+
+* Sorts list of map keys in ascending order:
+
+    Example:
+
+    ```kotlin
+    import io.opengood.commons.kotlin.extension.method.sortAscending
+    
+    val list = listOf(
+        mapOf(
+            "foo" to "bar",
+            "baz" to "pas"
+        ),
+        mapOf(
+            "foo" to "par",
+            "baz" to "taz"
+        )
+    )
+
+    list.sortAscending("baz")
+    ```
+
+###### sortDescending
+
+* Sorts list of map keys in descending order:
+
+    Example:
+
+    ```kotlin
+    import io.opengood.commons.kotlin.extension.method.sortDescending
+    
+    val list = listOf(
+        mapOf(
+            "baz" to "pas",
+            "foo" to "bar"
+        ),
+        mapOf(
+            "baz" to "taz",
+            "foo" to "par"
+        )
+    )
+
+    list.sortDescending("baz")
+    ```
+
 ##### Map
 
 ###### containsMultipleListItems
@@ -104,6 +150,19 @@ implementation("io.opengood.commons:kotlin-commons:VERSION")
     import io.opengood.commons.kotlin.extension.method.containsMultipleListItems
     
     mapOf("foo" to listOf("bar", "baz")).containsMultipleListItems("foo")
+    ```
+
+###### keyByIndex
+
+* Gets map key by index
+
+    Example:
+
+    ```kotlin
+    import io.opengood.commons.kotlin.extension.method.keyByIndex
+    
+    val map = mapOf("foo" to "bar")
+    map.keyByIndex(0)
     ```
 
 ###### notContainsKey
@@ -143,6 +202,19 @@ implementation("io.opengood.commons:kotlin-commons:VERSION")
     val map = mutableMapOf<String, String>()
     val entry = makeEntry("foo", "bar")
     map.putIfNotAbsent(entry)
+    ```
+
+###### valueByIndex
+
+* Gets map value by index
+
+    Example:
+
+    ```kotlin
+    import io.opengood.commons.kotlin.extension.method.valueByIndex
+    
+    val map = mapOf("foo" to "bar")
+    map.valueByIndex(0)
     ```
 
 ##### Pair
