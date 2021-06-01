@@ -342,6 +342,20 @@ String.tab
 String.whitespace
 ```
 
+##### UUID
+
+| Property | Description | Value |
+|---|---|---|
+| `empty` | Empty UUID | UUID(0L, 0L) |
+
+Example:
+
+```kotlin
+import io.opengood.commons.kotlin.extension.property.*
+
+Uuid.empty
+```
+
 ### Functions
 
 #### I/O
