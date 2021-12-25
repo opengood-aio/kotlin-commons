@@ -234,6 +234,19 @@ implementation("io.opengood.commons:kotlin-commons:VERSION")
 
 ##### String
 
+###### capitalizeWord
+
+* Capitalize word in a string:
+
+    Example:
+
+    ```kotlin
+    import io.opengood.commons.kotlin.extension.method.capitalizeWord
+    
+    "hello".capitalizeWord()
+    ```
+
+
 ###### capitalizeWords
 
 * Capitalize all words in a string:
