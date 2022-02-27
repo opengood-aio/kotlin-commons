@@ -3,4 +3,4 @@ on: [push]
 
 jobs:
   cancel:
-    uses: opengoodio/central-workflow/.github/workflows/workflow-cancel.yml@main
+    uses: opengoodio/central-workflows/.github/workflows/workflow-cancel.yml@main
