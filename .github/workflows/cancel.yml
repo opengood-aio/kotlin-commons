@@ -1,0 +1,6 @@
+name: build
+on: [push]
+
+jobs:
+  build:
+    uses: opengoodio/central-workflow/.github/workflows/workflow-cancel.yml@main
