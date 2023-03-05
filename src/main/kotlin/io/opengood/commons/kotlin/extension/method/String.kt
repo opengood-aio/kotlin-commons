@@ -6,9 +6,13 @@ import java.util.Locale
 
 fun String.capitalizeWord(): String =
     replaceFirstChar {
-        if (it.isLowerCase()) it.titlecase(
-            Locale.getDefault()
-        ) else it.toString()
+        if (it.isLowerCase()) {
+            it.titlecase(
+                Locale.getDefault(),
+            )
+        } else {
+            it.toString()
+        }
     }
 
 fun String.capitalizeWords(): String =

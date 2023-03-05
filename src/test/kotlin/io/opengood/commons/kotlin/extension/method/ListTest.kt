@@ -29,12 +29,12 @@ class ListTest : FunSpec({
         val list = listOf(
             mapOf(
                 "foo" to "bar",
-                "baz" to "pas"
+                "baz" to "pas",
             ),
             mapOf(
                 "foo" to "par",
-                "baz" to "taz"
-            )
+                "baz" to "taz",
+            ),
         )
 
         val result = list.sortAscending("baz")
@@ -42,12 +42,12 @@ class ListTest : FunSpec({
         result shouldBe listOf(
             mapOf(
                 "baz" to "pas",
-                "foo" to "bar"
+                "foo" to "bar",
             ),
             mapOf(
                 "baz" to "taz",
-                "foo" to "par"
-            )
+                "foo" to "par",
+            ),
         )
     }
 
@@ -55,12 +55,12 @@ class ListTest : FunSpec({
         val list = listOf(
             mapOf(
                 "baz" to "pas",
-                "foo" to "bar"
+                "foo" to "bar",
             ),
             mapOf(
                 "baz" to "taz",
-                "foo" to "par"
-            )
+                "foo" to "par",
+            ),
         )
 
         val result = list.sortDescending("baz")
@@ -68,12 +68,12 @@ class ListTest : FunSpec({
         result shouldBe listOf(
             mapOf(
                 "foo" to "par",
-                "baz" to "taz"
+                "baz" to "taz",
             ),
             mapOf(
                 "foo" to "bar",
-                "baz" to "pas"
-            )
+                "baz" to "pas",
+            ),
         )
     }
 })

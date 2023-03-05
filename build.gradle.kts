@@ -1,5 +1,3 @@
-import io.opengood.gradle.enumeration.ProjectType
-
 plugins {
     id("io.opengood.gradle.config")
 }
@@ -7,9 +5,6 @@ plugins {
 group = "io.opengood.commons"
 
 opengood {
-    main {
-        projectType = ProjectType.LIB
-    }
     features {
         spring = false
     }

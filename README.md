@@ -11,6 +11,10 @@
 Commons library containing reusable functions, extensions, and objects
 for Kotlin
 
+## Compatibility
+
+* Java 17
+
 ## Setup
 
 ### Add Dependency
