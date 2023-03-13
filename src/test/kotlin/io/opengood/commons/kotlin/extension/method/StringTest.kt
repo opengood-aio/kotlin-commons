@@ -75,6 +75,14 @@ class StringTest : FunSpec({
         "12345?<>$%*&@!".isInt().shouldBeFalse()
     }
 
+    test("string isUuid extension method returns true when string contains valid UUID characters") {
+        "12102e90-2918-4578-a9a1-bb16ac81d8f8".isUuid().shouldBeTrue()
+    }
+
+    test("string isUuid extension method returns false when string contains invalid UUID characters") {
+        "AAAAAAA-1111-2222-BBBB-CCCCCCCCCCC".isUuid().shouldBeFalse()
+    }
+
     test("string toIntOrZero extension method returns integer converted from string") {
         "12345".toIntOrZero() shouldBe 12345
     }

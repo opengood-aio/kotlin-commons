@@ -64,6 +64,8 @@ implementation("io.opengood.commons:kotlin-commons:VERSION")
         invokeInitializers = true
     }
     ```
+  
+---
 
 ### Extensions
 
@@ -82,6 +84,24 @@ implementation("io.opengood.commons:kotlin-commons:VERSION")
     
     arrayOf("foo", "bar").printAll()
     ```
+
+---
+
+##### BigDecimal
+
+###### roundUp
+
+* Rounds decimal value half up to specified scale:
+
+  Example:
+
+    ```kotlin
+    import io.opengood.commons.kotlin.extension.method.roundUp
+    
+    BigDecimal(12.346).roundUp(2)
+    ```
+
+---
 
 ##### List
 
@@ -142,6 +162,8 @@ implementation("io.opengood.commons:kotlin-commons:VERSION")
 
     list.sortDescending("baz")
     ```
+
+---
 
 ##### Map
 
@@ -222,6 +244,8 @@ implementation("io.opengood.commons:kotlin-commons:VERSION")
     map.valueByIndex(0)
     ```
 
+---
+
 ##### Pair
 
 ###### toEntry
@@ -236,6 +260,8 @@ implementation("io.opengood.commons:kotlin-commons:VERSION")
     Pair("foo", "bar").toEntry()
     ```
 
+---
+
 ##### String
 
 ###### capitalizeWord
@@ -249,7 +275,6 @@ implementation("io.opengood.commons:kotlin-commons:VERSION")
     
     "hello".capitalizeWord()
     ```
-
 
 ###### capitalizeWords
 
@@ -311,6 +336,18 @@ implementation("io.opengood.commons:kotlin-commons:VERSION")
     "12345".isInt()
     ```
 
+###### isUuid
+
+* Value indicating if string is UUIS:
+
+    Example:
+
+    ```kotlin
+    import io.opengood.commons.kotlin.extension.method.isUuid
+    
+    "12102e90-2918-4578-a9a1-bb16ac81d8f8".isUuid()
+    ```
+
 ###### toIntOrZero
 
 * Value indicating if string is integer, if so then value as integer,
@@ -324,23 +361,41 @@ and if not, then value is zero:
     "12345".toIntOrZero()
     ```
 
+---
+
 #### Properties
+
+##### Decimal
+
+| Property | Description           | Value         |
+|----------|-----------------------|---------------|
+| `zero`   | BigDecimal zero value | BigDecimal(0) |
+
+Example:
+
+```kotlin
+import io.opengood.commons.kotlin.extension.property.*
+
+Decimal.zero
+```
+
+---
 
 ##### String
 
-| Property | Description | Value |
-|---|---|---|
-| `carriageReturn` | Carrier return | `\r` |
-| `comma` | Comma | `,` |
-| `crlf` | Carriage return/line feed | `\n\r` |
-| `empty` | Empty string |  |
-| `equalsSign` | Equals sign | `=` |
-| `greaterThanSign` | Greater than sign | `>` |
-| `lessThanSign` | Less than sign | `<` |
-| `newline` | Newline | `\n` |
-| `pipe` | Pipe | `\|` |
-| `tab` | Tab | `\t` |
-| `whitespace` | Whitespace |  |
+| Property          | Description               | Value  |
+|-------------------|---------------------------|--------|
+| `carriageReturn`  | Carrier return            | `\r`   |
+| `comma`           | Comma                     | `,`    |
+| `crlf`            | Carriage return/line feed | `\n\r` |
+| `empty`           | Empty string              |        |
+| `equalsSign`      | Equals sign               | `=`    |
+| `greaterThanSign` | Greater than sign         | `>`    |
+| `lessThanSign`    | Less than sign            | `<`    |
+| `newline`         | Newline                   | `\n`   |
+| `pipe`            | Pipe                      | `\     |
+| `tab`             | Tab                       | `\t`   |
+| `whitespace`      | Whitespace                |        |
 
 Example:
 
@@ -360,11 +415,13 @@ String.tab
 String.whitespace
 ```
 
+---
+
 ##### UUID
 
-| Property | Description | Value |
-|---|---|---|
-| `empty` | Empty UUID | UUID(0L, 0L) |
+| Property | Description | Value        |
+|----------|-------------|--------------|
+| `empty`  | Empty UUID  | UUID(0L, 0L) |
 
 Example:
 
@@ -373,6 +430,8 @@ import io.opengood.commons.kotlin.extension.property.*
 
 Uuid.empty
 ```
+
+---
 
 ### Functions
 
@@ -390,6 +449,8 @@ Uuid.empty
     val output = captureStdOut { print("foo") }
     ```
 
+---
+
 #### Map
 
 ##### makeEntry
@@ -403,6 +464,8 @@ Uuid.empty
     
     makeEntry("foo", "bar")
     ```
+  
+---
 
 ### Infix Functions
 
@@ -422,6 +485,8 @@ returning simple results:
     val result = (condition == 1) then { true } ?: false
     ```
 
+---
+
 #### Generic Type
 
 ##### firstOrDefault
@@ -436,6 +501,8 @@ default value:
     
     "foo" firstOrDefault "bar"
     ```
+
+---
 
 #### Integer
 

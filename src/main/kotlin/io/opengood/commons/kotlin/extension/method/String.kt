@@ -30,5 +30,8 @@ fun String.isBoolean(): Boolean =
 fun String.isInt(): Boolean =
     (isNotBlank() then { all { Character.isDigit(it) } }) ?: false
 
+fun String.isUuid(): Boolean =
+    Regex("^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}\$").matches(this)
+
 fun String.toIntOrZero(): Int =
     toIntOrNull() ?: 0
