@@ -26,54 +26,58 @@ class ListTest : FunSpec({
     }
 
     test("list sortAscending extension method sorts list of maps keys in ascending order") {
-        val list = listOf(
-            mapOf(
-                "foo" to "bar",
-                "baz" to "pas",
-            ),
-            mapOf(
-                "foo" to "par",
-                "baz" to "taz",
-            ),
-        )
+        val list =
+            listOf(
+                mapOf(
+                    "foo" to "bar",
+                    "baz" to "pas",
+                ),
+                mapOf(
+                    "foo" to "par",
+                    "baz" to "taz",
+                ),
+            )
 
         val result = list.sortAscending("baz")
 
-        result shouldBe listOf(
-            mapOf(
-                "baz" to "pas",
-                "foo" to "bar",
-            ),
-            mapOf(
-                "baz" to "taz",
-                "foo" to "par",
-            ),
-        )
+        result shouldBe
+            listOf(
+                mapOf(
+                    "baz" to "pas",
+                    "foo" to "bar",
+                ),
+                mapOf(
+                    "baz" to "taz",
+                    "foo" to "par",
+                ),
+            )
     }
 
     test("list sortDescending extension method sorts list of maps keys in descending order") {
-        val list = listOf(
-            mapOf(
-                "baz" to "pas",
-                "foo" to "bar",
-            ),
-            mapOf(
-                "baz" to "taz",
-                "foo" to "par",
-            ),
-        )
+        val list =
+            listOf(
+                mapOf(
+                    "baz" to "pas",
+                    "foo" to "bar",
+                ),
+                mapOf(
+                    "baz" to "taz",
+                    "foo" to "par",
+                ),
+            )
 
         val result = list.sortDescending("baz")
 
-        result shouldBe listOf(
-            mapOf(
-                "foo" to "par",
-                "baz" to "taz",
-            ),
-            mapOf(
-                "foo" to "bar",
-                "baz" to "pas",
-            ),
-        )
+        result shouldBe
+            listOf(
+                mapOf(
+                    "foo" to "par",
+                    "baz" to "taz",
+                ),
+                mapOf(
+                    "foo" to "bar",
+                    "baz" to "pas",
+                ),
+            )
     }
 })

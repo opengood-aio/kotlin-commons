@@ -8,11 +8,12 @@ import io.opengood.commons.kotlin.function.captureStdOut
 class ArrayTest : FunSpec({
 
     test("array of generic type printAll extension method prints all items to standard output") {
-        val expected = """
+        val expected =
+            """
             |Item #0: foo
             |Item #1: bar
             |
-        """.trimMargin()
+            """.trimMargin()
 
         val output = captureStdOut { arrayOf("foo", "bar").printAll() }
 
