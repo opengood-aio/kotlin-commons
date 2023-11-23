@@ -2,6 +2,7 @@
 
 [![Build](https://github.com/opengoodio/kotlin-commons/workflows/build/badge.svg)](https://github.com/opengoodio/kotlin-commons/actions?query=workflow%3Abuild)
 [![Release](https://github.com/opengoodio/kotlin-commons/workflows/release/badge.svg)](https://github.com/opengoodio/kotlin-commons/actions?query=workflow%3Arelease)
+[![CodeQL](https://github.com/opengoodio/kotlin-commons/actions/workflows/codeql.yml/badge.svg)](https://github.com/opengoodio/kotlin-commons/actions/workflows/codeql.yml)
 [![Codecov](https://codecov.io/gh/opengoodio/kotlin-commons/branch/main/graph/badge.svg?token=AEEYTGK87F)](https://codecov.io/gh/opengoodio/kotlin-commons)
 [![Release Version](https://img.shields.io/github/release/opengoodio/kotlin-commons.svg)](https://github.com/opengoodio/kotlin-commons/releases/latest)
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/io.opengood.commons/kotlin-commons/badge.svg)](https://maven-badges.herokuapp.com/maven-central/io.opengood.commns/kotlin-commons)
