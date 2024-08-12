@@ -7,7 +7,6 @@
 [![Release Version](https://img.shields.io/github/release/opengoodio/kotlin-commons.svg)](https://github.com/opengoodio/kotlin-commons/releases/latest)
 [![Maven Central](https://img.shields.io/maven-central/v/io.opengood.commons/kotlin-commons.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22io.opengood.commons%22%20AND%20a:%22kotlin-commons%22)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/opengoodio/kotlin-commons/master/LICENSE)
-[![FOSSA](https://app.fossa.com/api/projects/custom%2B22161%2Fgithub.com%2Fopengoodio%2Fkotlin-commons.svg?type=small)](https://app.fossa.com/projects/custom%2B22161%2Fgithub.com%2Fopengoodio%2Fkotlin-commons?ref=badge_small)
 
 Commons library containing reusable functions, extensions, and objects
 for Kotlin
