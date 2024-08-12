@@ -1,12 +1,12 @@
 # Kotlin Commons Library
 
-[![Build](https://github.com/opengoodio/kotlin-commons/workflows/build/badge.svg)](https://github.com/opengoodio/kotlin-commons/actions?query=workflow%3Abuild)
-[![Release](https://github.com/opengoodio/kotlin-commons/workflows/release/badge.svg)](https://github.com/opengoodio/kotlin-commons/actions?query=workflow%3Arelease)
-[![CodeQL](https://github.com/opengoodio/kotlin-commons/actions/workflows/codeql.yml/badge.svg)](https://github.com/opengoodio/kotlin-commons/actions/workflows/codeql.yml)
-[![Codecov](https://codecov.io/gh/opengoodio/kotlin-commons/branch/main/graph/badge.svg?token=AEEYTGK87F)](https://codecov.io/gh/opengoodio/kotlin-commons)
-[![Release Version](https://img.shields.io/github/release/opengoodio/kotlin-commons.svg)](https://github.com/opengoodio/kotlin-commons/releases/latest)
+[![Build](https://github.com/opengood-aio/kotlin-commons/workflows/build/badge.svg)](https://github.com/opengood-aio/kotlin-commons/actions?query=workflow%3Abuild)
+[![Release](https://github.com/opengood-aio/kotlin-commons/workflows/release/badge.svg)](https://github.com/opengood-aio/kotlin-commons/actions?query=workflow%3Arelease)
+[![CodeQL](https://github.com/opengood-aio/kotlin-commons/actions/workflows/codeql.yml/badge.svg)](https://github.com/opengood-aio/kotlin-commons/actions/workflows/codeql.yml)
+[![Codecov](https://codecov.io/gh/opengood-aio/kotlin-commons/branch/main/graph/badge.svg?token=AEEYTGK87F)](https://codecov.io/gh/opengood-aio/kotlin-commons)
+[![Release Version](https://img.shields.io/github/release/opengood-aio/kotlin-commons.svg)](https://github.com/opengood-aio/kotlin-commons/releases/latest)
 [![Maven Central](https://img.shields.io/maven-central/v/io.opengood.commons/kotlin-commons.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22io.opengood.commons%22%20AND%20a:%22kotlin-commons%22)
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/opengoodio/kotlin-commons/master/LICENSE)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/opengood-aio/kotlin-commons/master/LICENSE)
 
 Commons library containing reusable functions, extensions, and objects
 for Kotlin
