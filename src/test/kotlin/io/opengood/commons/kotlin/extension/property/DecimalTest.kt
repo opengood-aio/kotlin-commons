@@ -4,9 +4,10 @@ import io.kotest.core.spec.style.FunSpec
 import io.kotest.matchers.shouldBe
 import java.math.BigDecimal
 
-class DecimalTest : FunSpec({
+class DecimalTest :
+    FunSpec({
 
-    test("Decimal zero extension property returns BigDecimal zero value") {
-        Decimal.zero shouldBe BigDecimal(0)
-    }
-})
+        test("Decimal zero extension property returns BigDecimal zero value") {
+            Decimal.zero shouldBe BigDecimal(0)
+        }
+    })
